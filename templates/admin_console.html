@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Admin Console</title>
+</head>
+<body>
+    <h1>Admin Console</h1>
+    <nav>
+        <a href="/add">Add Item</a>
+        <a href="/logout">Logout</a>
+    </nav>
+    <h2>Inventory</h2>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        {% for item, details in inventory.items() %}
+        <tr>
+            <td>{{ item }}</td>
+            <td>{{ details.quantity }}</td>
+            <td>{{ details.price }}</td>
+            <td>
+                <a href="/update/{{ item }}">Update</a>
+                <a href="/delete/{{ item }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

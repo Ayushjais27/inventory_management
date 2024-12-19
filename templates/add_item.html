@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Add Item</title>
+</head>
+<body>
+    <h1>Add New Item</h1>
+    <form method="POST">
+        <label>Item Name: <input type="text" name="item_name" required></label><br>
+        <label>Quantity: <input type="number" name="quantity" required></label><br>
+        <label>Price: <input type="number" step="0.01" name="price" required></label><br>
+        <button type="submit">Add Item</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

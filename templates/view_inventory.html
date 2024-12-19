@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>View Inventory</title>
+</head>
+<body>
+    <h1>Inventory</h1>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        {% for item, details in inventory.items() %}
+        <tr>
+            <td>{{ item }}</td>
+            <td>{{ details.quantity }}</td>
+            <td>{{ details.price }}</td>
+            <td>
+                <a href="/update/{{ item }}">Update</a>
+                <a href="/delete/{{ item }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>

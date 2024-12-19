@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>User Console</title>
+</head>
+<body>
+    <h1>User Console</h1>
+    <nav>
+        <a href="/logout">Logout</a>
+    </nav>
+    <h2>Inventory</h2>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        {% for item, details in inventory.items() %}
+        <tr>
+            <td>{{ item }}</td>
+            <td>{{ details.quantity }}</td>
+            <td>{{ details.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "item1": {"name": "Smartphone", "category": "Electronics", "stock": 20, "price": 699.99},
+    "item2": {"name": "T-shirt", "category": "Clothing", "stock": 50, "price": 19.99},
+    "item3": {"name": "Milk", "category": "Groceries", "stock": 30, "price": 2.99}
+}

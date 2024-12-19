@@ -30,5 +30,38 @@
         </tr>
         {% endfor %}
     </table>
+       <!-- Search and Filter UI -->
+<div style="text-align: center; margin-bottom: 20px;">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search items..."
+        onkeyup="filterTable()"
+        style="padding: 10px; width: 200px; border-radius: 5px; border: 1px solid #ddd;"
+    />
+    <select
+        id="categoryFilter"
+        onchange="filterTable()"
+        style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;"
+    >
+        <option value="">All Categories</option>
+        <!-- Add categories dynamically -->
+    </select>
+</div>
+
+<!-- Inventory Table -->
+<table id="inventoryTable" style="width: 90%; margin: 0 auto; border-collapse: collapse; text-align: left;">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Category</th>
+            <th>Stock</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows will be dynamically added here -->
+    </tbody>
+</table>
 </body>
 </html>

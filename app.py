@@ -26,6 +26,13 @@ def save_data(data):
         json.dump(data, file)
 
 # Routes
+from flask import jsonify
+
+@app.route('/get_inventory', methods=['GET'])
+def get_inventory():
+    inventory = load_data()  # Use your existing load_data() function
+    return jsonify(inventory)
+
 @app.route("/")
 def index():
     return render_template("index.html")
